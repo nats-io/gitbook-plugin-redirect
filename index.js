@@ -11,7 +11,7 @@ module.exports = {
       var path = require('path');
 
       var dirname = path.dirname(page.path);
-      var pagename = path.basename(page.rawPath).replace('README.md', '').replace('intro.html', '').replace('.html', '');
+      var pagename = path.basename(page.rawPath).replace('.md', '.html').replace('README.html', '').replace('intro.html', '').replace('.html', '');
 
       var redirectPageContent = function(path){
         return '' +
