@@ -12,18 +12,18 @@
     "homepage": "https://github.com/mallowlabs/gitbook-plugin-redirect-sub",
     "repository": {
         "type": "git",
-        "url": "https://github.com/mallowlabs/gitbook-plugin-redirect-sub.git"
+        "url": "https://github.com/mallowlabs/gitbook-plugin-redirect.git"
     },
     "license": "Apache 2",
     "bugs": {
-        "url": "https://github.com/mallowlabs/gitbook-plugin-redirect-sub/issues"
+        "url": "https://github.com/nats-io/gitbook-plugin-redirect/issues"
     },
     "keywords": [
         "gitbook",
         "plugin"
     ],
     "author": {
-        "name": "mallowlabs",
-        "email": "mallowlabs [at] gmail [dot] com"
+        "name": "nats-io",
+        "email": "info [at] nats.io"
     }
 }
