@@ -2,17 +2,12 @@ module.exports = {
   hooks: {
     "page:before": function(page) {
 
-      var root = this.config.options.pluginsConfig.redirect_sub.root;
-      var bookname = this.config.options.pluginsConfig.redirect_sub.bookname;  
+      var root = this.config.options.pluginsConfig.redirect.root;
       
       var path = require('path');
 
       var dirname = path.dirname(page.path);
       var pagename = path.basename(page.rawPath).replace('README.md', '').replace('md', 'html');
-
-      if(!bookname){
-        bookname = path.basename(page.rawPath.replace(page.path, ''));
-      }
 
       var redirectPageContent = function(path){
         return '' +
@@ -28,7 +23,7 @@ module.exports = {
           '</p>\n' +
           '<script>window.location.href="' + path + '";</script>\n';
       };
-      var redirectPath = root + "/" + bookname + "/" + dirname + "/" + pagename;
+      var redirectPath = root + "/" + dirname + "/" + pagename;
       page.content = redirectPageContent(redirectPath) + page.content;
       return page;
     }
