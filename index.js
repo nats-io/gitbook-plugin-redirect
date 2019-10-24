@@ -7,11 +7,27 @@ module.exports = {
       if (root === '') {
         return page;
       }
-      
       var path = require('path');
+      
+      /* this will require manually checking every page for changes, just redirect to root every time
 
       var dirname = path.dirname(page.path);
       var pagename = path.basename(page.rawPath).replace('.md', '.html').replace('README.html', '').replace('intro.html', '').replace('.html', '');
+
+      var renames = new Map([
+        ['developer', 'developing-with-nats'],
+        ['nats_server', 'nats-server'],
+        ['nats_streaming', 'nats-streaming-concepts']
+      ]);
+
+      renames.forEach((value, key) => {
+        dirname = dirname.replace(key, value);
+      })
+
+      var redirectPath = pagename !== '' ? root + "/" + dirname + "/" + pagename : root + "/" + dirname;
+      */
+      
+      var redirectPath = root; // send everything to root
 
       var redirectPageContent = function(path){
         return '' +
@@ -27,7 +43,6 @@ module.exports = {
           '</p>\n' +
           '<script>window.location.href="' + path + '";</script>\n';
       };
-      var redirectPath = pagename !== '' ? root + "/" + dirname + "/" + pagename : root + "/" + dirname;
       page.content = redirectPageContent(redirectPath) + page.content;
       return page;
     }
