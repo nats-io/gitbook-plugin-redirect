@@ -2,7 +2,7 @@ module.exports = {
   hooks: {
     "page:before": function(page) {
 
-      var root = this.config.options.pluginsConfig.redirect.root;
+      var root = this.config.options.pluginsConfig.redirect_sub.root;
       
       var path = require('path');
 

@@ -7,7 +7,7 @@ This GitBook plugin can redirect gitbook page.
 Add to your `book.json` plugin list:
 ```json
 {
-    "plugins" : [ "redirect-sub@https://github.com/mallowlabs/gitbook-plugin-redirect-sub.git#0.0.1" ],
+    "plugins" : [ "redirect-sub@https://github.com/nats-io/gitbook-plugin-redirect-sub.git" ],
     "pluginsConfig": {
         "redirect_sub" : {
             "root" : "your-redirect-url-root",
@@ -22,11 +22,10 @@ For example, when you write below config in `book.json`,
 ```json
 "redirect_sub" : {
     "root" : "https://books.example.com",
-    "bookname" : "my-book"
 }
 ```
 
-and you access to `https://example.gitbook.io/my-book/xxx/yyy.html` , you will be redirected to `https://books.example.com/my-book/xxx/yyy.html`.
+and you access to `https://example.gitbook.io/xxx/yyy.html` , you will be redirected to `https://books.example.com/xxx/yyy.html`.
 
 
 ## Credits

@@ -9,10 +9,10 @@
     "dependencies": {
         "valid-url": "*"
     },
-    "homepage": "https://github.com/mallowlabs/gitbook-plugin-redirect-sub",
+    "homepage": "https://github.com/nats-io/gitbook-plugin-redirect-sub",
     "repository": {
         "type": "git",
-        "url": "https://github.com/mallowlabs/gitbook-plugin-redirect.git"
+        "url": "https://github.com/nats-io/gitbook-plugin-redirect.git"
     },
     "license": "Apache 2",
     "bugs": {
