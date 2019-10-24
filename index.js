@@ -12,9 +12,11 @@ module.exports = {
         ['nats_server/monitoring.html', 'https://docs.nats.io/nats-server/configuration/monitoring'],
       ]);
       var redirectPath = root; // send everything to root by default
+      var pagePath = page.path;
+      console.log(pagePath);
 
       custom.forEach((value, key) => {
-        if (page.path.endsWith(key)) {
+        if (pagePath.endsWith(key)) {
           redirectPath = value;
         }
       });
