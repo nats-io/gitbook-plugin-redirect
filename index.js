@@ -11,7 +11,7 @@ module.exports = {
       var path = require('path');
 
       var dirname = path.dirname(page.path);
-      var pagename = path.basename(page.rawPath).replace('README.md', '').replace('md', 'html');
+      var pagename = path.basename(page.rawPath).replace('README.md', '').replace('intro.html', '').replace('.html', '');
 
       var redirectPageContent = function(path){
         return '' +
@@ -27,7 +27,7 @@ module.exports = {
           '</p>\n' +
           '<script>window.location.href="' + path + '";</script>\n';
       };
-      var redirectPath = root + "/" + dirname + "/" + pagename;
+      var redirectPath = pagename !== '' ? root + "/" + dirname + "/" + pagename : root + "/" + dirname;
       page.content = redirectPageContent(redirectPath) + page.content;
       return page;
     }
