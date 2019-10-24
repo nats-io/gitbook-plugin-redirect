@@ -3,6 +3,10 @@ module.exports = {
     "page:before": function(page) {
 
       var root = this.config.options.pluginsConfig.redirect_sub.root;
+
+      if (root === '') {
+        return page;
+      }
       
       var path = require('path');
 
