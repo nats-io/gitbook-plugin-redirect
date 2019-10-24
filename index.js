@@ -9,17 +9,18 @@ module.exports = {
       }
 
       var custom = new Map([
-        ['nats_server/monitoring.html', 'https://docs.nats.io/nats-server/configuration/monitoring'],
+        ['nats_server/monitoring.html', root + '/nats-server/configuration/monitoring'],
       ]);
       var redirectPath = root; // send everything to root by default
       var pagePath = page.path;
-      console.log(pagePath);
+      console.log("pagepath", pagePath);
 
       custom.forEach((value, key) => {
         if (pagePath.endsWith(key)) {
           redirectPath = value;
         }
       });
+      console.log("redirectPath", redirectPath);
       
       /* keeping this code, many things were renamed so we would have to manual checking every page for changes, just redirect to root every time
       var path = require('path');
